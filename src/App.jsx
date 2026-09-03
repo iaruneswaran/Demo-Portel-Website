@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from './components/HeroSection';
 import DualCardsSection from './components/DualCardsSection';
 import WorkflowCardsSection from './components/WorkflowCardsSection';
+import UtilityCardsSection from './components/UtilityCardsSection';
 import DemoContentDrawer from './components/DemoContentDrawer';
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
         <div className="sections-wrapper">
           <DualCardsSection />
           <WorkflowCardsSection />
+          <UtilityCardsSection />
         </div>
       </main>
     </div>

@@ -307,41 +307,55 @@ button, input, select, textarea {
 
 .apple-flagship-card:hover {
   border-color: #cbd5e1;
-  box-shadow: 0 12px 36px -4px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.02);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+  transform: none;
 }
 
-/* CARD HEADER & TYPOGRAPHY */
+/* CARD HEADER & TYPOGRAPHY (RIGHT-ALIGNED BADGE) */
 .apple-card-header {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 
 .apple-header-title-wrap {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   width: 100%;
 }
 
-/* ACTIVE OPERATIONAL STEP BADGE */
+.apple-card-title {
+  font-size: clamp(1.2rem, 1.6vw, 1.42rem);
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin: 0;
+  text-align: left;
+  flex: 1;
+}
+
+/* ACTIVE OPERATIONAL STEP BADGE (RIGHT ALIGNED) */
 .apple-step-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
+  gap: 7px;
+  padding: 5px 12px;
   background: #0f172a;
   color: #ffffff;
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   border-radius: 9999px;
   font-family: var(--font-display);
   box-shadow: 0 2px 8px rgba(15, 23, 42, 0.14);
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .apple-step-badge::before {
@@ -354,22 +368,16 @@ button, input, select, textarea {
   box-shadow: 0 0 8px #38bdf8;
 }
 
-.apple-card-title {
-  font-size: clamp(1.2rem, 1.6vw, 1.42rem);
-  font-weight: 600;
-  color: #0f172a;
-  letter-spacing: -0.025em;
-  line-height: 1.25;
-  margin: 0;
-  text-align: left;
-}
-
 /* 2x2 GRID TILES (STRICT EQUAL WIDTH) */
 .apple-grid-2x2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   width: 100%;
+}
+
+.apple-grid-2x2 .apple-item-tile:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 /* APPLE ITEM TILES (CARDS 01-06 - ACTIVE WORKING MODE) */
@@ -397,8 +405,8 @@ button, input, select, textarea {
 .apple-item-tile:focus-visible {
   background: #ffffff;
   border-color: #2563eb;
-  box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.12), 0 2px 6px rgba(15, 23, 42, 0.04);
-  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+  transform: none;
 }
 
 /* ICON CONTAINER WELL - ENERGIZED & ACTIVE */
@@ -413,28 +421,53 @@ button, input, select, textarea {
   justify-content: center;
   color: #2563eb;
   flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.06);
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: none;
+  transition: all 0.18s ease;
 }
 
 .apple-item-tile:hover .apple-icon-well {
   background: #2563eb;
   color: #ffffff;
   border-color: #2563eb;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  transform: none;
+  box-shadow: none;
 }
 
-/* DOCTOR AVATAR WELL */
+/* CLINIC ICON WRAP (USING IMAGES FROM FOLDER) */
+.clinic-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: all 0.18s ease;
+}
+
+.clinic-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.apple-item-tile:hover .clinic-icon-wrap .clinic-icon-img {
+  transform: none;
+}
+
+/* DOCTOR AVATAR WELL (NO DROP SHADOW) */
 .doctor-avatar-wrap {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
-  border: 2px solid #e2e8f0;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+  box-shadow: none;
+  transition: all 0.18s ease;
 }
 
 .doctor-avatar-img {
@@ -445,9 +478,9 @@ button, input, select, textarea {
 }
 
 .apple-item-tile:hover .doctor-avatar-wrap {
-  border-color: #2563eb;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  border: none;
+  box-shadow: none;
+  transform: none;
 }
 
 /* TILE TEXT BODY - HIGH DEFINITION CONTRAST */
@@ -500,7 +533,7 @@ button, input, select, textarea {
 
 .apple-item-tile:hover .apple-tile-action {
   color: #2563eb;
-  transform: translateX(3px);
+  transform: none;
 }
 
 /* ============================================================
@@ -534,8 +567,8 @@ button, input, select, textarea {
 
 .apple-workflow-card:hover {
   border-color: #cbd5e1;
-  box-shadow: 0 12px 36px -4px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.02);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+  transform: none;
 }
 
 .apple-workflow-items {
@@ -570,7 +603,41 @@ button, input, select, textarea {
 .workflow-item-tile:focus-visible {
   background: #f8fafc;
   box-shadow: none;
-  transform: translateX(4px);
+  transform: none;
+}
+
+/* ============================================================
+   SYSTEM UTILITY & 3RD-PARTY AI SMALL CARDS (SEPARATE WITH GAP BOTTOM)
+   ============================================================ */
+.apple-utility-section {
+  width: 100%;
+  margin-top: 48px;
+  margin-bottom: 72px;
+}
+
+.apple-utility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.utility-small-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 16px 14px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+  transition: border-color 0.18s ease;
+  min-height: auto;
+}
+
+.utility-small-card:hover,
+.utility-small-card:focus-visible {
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+  transform: none;
 }
 
 /* ============================================================

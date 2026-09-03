@@ -14,33 +14,40 @@ const DEMO_SNIPPETS = [
   {
     category: 'Clinic Intake',
     section: '01',
-    title: 'Dental Consultation Reason',
+    title: 'General Consultation Reason',
     tag: 'Appointment Reason',
-    content: 'Patient requesting dental check-up for persistent cold sensitivity on upper right second premolar and routine periodontal scaling.'
+    content: 'Patient requesting annual comprehensive health checkup, baseline metabolic screening, and routine blood pressure evaluation.'
   },
   {
     category: 'Clinic Intake',
     section: '01',
-    title: 'Cardiology Intake Reason',
+    title: 'Gynecology Intake Reason',
     tag: 'Appointment Reason',
-    content: '52-year-old patient reports intermittent exertional chest tightness and resting palpitations over the past 3 weeks. Requesting cardiovascular evaluation.'
+    content: 'Routine annual pelvic examination, reproductive wellness consultation, and follow-up on prenatal screening results.'
   },
   {
     category: 'Clinic Intake',
     section: '01',
-    title: 'Pediatric Intake Reason',
+    title: 'Dental Care Reason',
     tag: 'Appointment Reason',
-    content: 'Child aged 6 presenting with mild dry cough, nocturnal wheezing for 4 days, and overdue scheduled booster vaccination.'
+    content: 'Patient requesting bi-annual dental prophylaxis, periodontal evaluation, and treatment for mild cold sensitivity on upper premolar.'
   },
   {
     category: 'Clinic Intake',
     section: '01',
-    title: 'Orthopedic Intake Reason',
+    title: 'Mental Wellness Intake Reason',
     tag: 'Appointment Reason',
-    content: 'Acute right knee pain following a twist during sports activity. Moderate localized swelling and restricted weight-bearing range of motion.'
+    content: 'Requesting initial clinical assessment for work-related chronic fatigue, sleep disruption, and cognitive stress management.'
+  },
+  {
+    category: 'Clinic Intake',
+    section: '01',
+    title: 'Sports Medicine Intake Reason',
+    tag: 'Appointment Reason',
+    content: 'Acute right lateral knee discomfort following marathon training. Localized joint stiffness and assessment for physical therapy.'
   },
 
-  // 03 ADMISSION AI
+  // 03 IP/OP AGENTS
   {
     category: 'Admission AI',
     section: '03',
@@ -51,57 +58,57 @@ const DEMO_SNIPPETS = [
   {
     category: 'Admission AI',
     section: '03',
-    title: 'Hands-Free Voice Charting Prompt',
+    title: 'Hands-Free Mode Charting Prompt',
     tag: 'Voice Dictation',
     content: 'Dictate Chart: Subjective chest tightness resolved with rest. Objective findings: Normal S1/S2, clear lung fields bilaterally, no peripheral edema. Assessment: Atypical non-cardiac chest discomfort. Plan: Lipid panel, follow-up in 2 weeks.'
   },
 
-  // 04 LABORATORY
-  {
-    category: 'Laboratory',
-    section: '04',
-    title: 'Sample Barcode & Specimen ID',
-    tag: 'Specimen Intake',
-    content: 'SPEC-99420-EDTA: Fasting venous blood sample collected in green top tube. Centrifuged at 3000 RPM. Routine comprehensive metabolic panel and HbA1c screening.'
-  },
-  {
-    category: 'Laboratory',
-    section: '04',
-    title: 'AI Diagnostic Report Release',
-    tag: 'Diagnostic Summary',
-    content: 'Automated AI Diagnostic Check: Troponin-I < 0.01 ng/mL (Normal), Fasting Glucose 94 mg/dL (Normal), Serum Creatinine 0.9 mg/dL (Normal). No critical alerts triggered. Released to attending physician portal.'
-  },
-
-  // 05 PHARMACY
+  // 04 PHARMACY
   {
     category: 'Pharmacy',
-    section: '05',
-    title: 'AI e-Prescription (e-Rx)',
-    tag: 'Smart Prescription',
+    section: '04',
+    title: 'POS Billing & Checkout',
+    tag: 'Point-of-Sale',
+    content: 'POS Transaction #POS-8841: Prescription items validated. Total $42.50. Co-pay collected via NFC terminal. Receipt and medication intake schedule printed.'
+  },
+  {
+    category: 'Pharmacy',
+    section: '04',
+    title: 'AI Pharmacy Verification',
+    tag: 'Smart e-Rx',
     content: 'Rx: Atorvastatin Calcium 20mg oral tablet. Take 1 tablet daily at bedtime. Quantity: 30 tablets. AI Dosage Verification: Cleared with zero drug-drug contraindications.'
   },
+
+  // 05 LABORATORY
   {
-    category: 'Pharmacy',
+    category: 'Laboratory',
     section: '05',
-    title: 'AI Pharmacy Fulfillment Report',
-    tag: 'Dispense Log',
-    content: 'Pharmacy Stock Fulfillment #RX-88412: Amoxicillin 500mg (21 capsules) allocated from Automated Dispense Unit #3. Barcode scan verified. Patient label generated with food-timing instructions.'
+    title: 'Work Order Management Log',
+    tag: 'Lab Orders',
+    content: 'WORK-ORDER-77492: Fasting venous blood sample collected in green top tube. Centrifuged at 3000 RPM. Scheduled for comprehensive metabolic panel and HbA1c screening.'
+  },
+  {
+    category: 'Laboratory',
+    section: '05',
+    title: 'Report Approval / AI Verification',
+    tag: 'Diagnostic Verification',
+    content: 'Automated AI Diagnostic Check: Troponin-I < 0.01 ng/mL (Normal), Fasting Glucose 94 mg/dL (Normal), Serum Creatinine 0.9 mg/dL (Normal). No critical alerts triggered. Verified & released to physician portal.'
   },
 
-  // 06 DISCHARGE
+  // 06 DISCHARGE SUMMARY
   {
     category: 'Discharge',
     section: '06',
-    title: 'Physician Care Summary & Plan',
-    tag: 'Care Notes',
+    title: 'Reports Studio Care Summary',
+    tag: 'Reports Studio',
     content: 'Patient discharged in stable hemodynamic condition. Instructions provided regarding low-sodium diet, hydration, and prescribed statin medication. Return to clinic in 14 days or immediately if chest discomfort recurs.'
   },
   {
     category: 'Discharge',
     section: '06',
-    title: 'Billing Clearance & Exit Slip',
-    tag: 'Invoice Reconciliation',
-    content: 'Invoice #INV-2026-8834: Total Consultation & Diagnostics $380.00. Insurance Co-Pay $30.00 processed via card. Account balance: $0.00 (Fully Cleared). Exit clearance granted.'
+    title: 'Template Management Care Plan',
+    tag: 'Standardized Template',
+    content: 'Discharge Template #TPL-CARDIO-04 applied: Post-consultation guidelines, diet protocol, emergency triage indicators, and digital follow-up booking link generated.'
   }
 ];
 

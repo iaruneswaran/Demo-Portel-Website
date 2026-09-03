@@ -253,6 +253,7 @@ button, input, select, textarea {
   grid-template-columns: repeat(2, 1fr);
   gap: 18px;
   width: 100%;
+  margin-top: 48px;
 }
 
 .dual-card {
@@ -269,19 +270,18 @@ button, input, select, textarea {
 }
 
 .dual-card-inner-white {
-  background: #ffffff;
-  border-radius: 20px;
+  background: transparent;
   width: 100%;
   flex: 1;
-  padding: 36px 32px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   text-align: left;
   gap: 28px;
-  box-shadow: 0 12px 36px rgba(15, 76, 133, 0.08), 0 2px 8px rgba(15, 76, 133, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: none;
+  border: none;
   box-sizing: border-box;
 }
 
@@ -461,8 +461,8 @@ button, input, select, textarea {
     border-radius: 18px;
   }
   .dual-card-inner-white {
-    padding: 28px 20px;
-    border-radius: 16px;
+    padding: 0;
+    border-radius: 0;
     gap: 20px;
   }
   .apple-tile {
@@ -485,6 +485,7 @@ button, input, select, textarea {
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
   width: 100%;
+  margin-top: 24px;
 }
 
 .workflow-white-card {

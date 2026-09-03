@@ -8,8 +8,10 @@ export default function App() {
     <div className="app-root">
       <main>
         <HeroSection />
-        <DualCardsSection />
-        <WorkflowCardsSection />
+        <div className="sections-wrapper">
+          <DualCardsSection />
+          <WorkflowCardsSection />
+        </div>
       </main>
     </div>
   );

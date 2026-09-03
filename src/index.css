@@ -246,363 +246,339 @@ button, input, select, textarea {
 }
 
 /* ============================================================
-   DUAL CARDS SECTION (GRADIENT BG + INNER WHITE CARD)
+   APPLE DESIGN SYSTEM: CLINICAL INTAKE & WORKFLOW SECTIONS
    ============================================================ */
-.dual-cards-section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  width: 100%;
-  margin-top: 48px;
-}
 
-.dual-card {
-  position: relative;
-  background: linear-gradient(180deg, #b9e0fc 0%, #d5ecfe 45%, #ecf6ff 100%);
-  border-radius: 24px;
-  padding: 100px 90px;
-  min-height: 480px;
+/* CONTAINER FOR SECTIONS 01-06 (CENTERED 1360PX WIDTH) */
+.sections-wrapper {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 40px 24px 72px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  gap: 24px;
   box-sizing: border-box;
-  box-shadow: 0 4px 20px rgba(15, 76, 133, 0.04);
 }
 
-.dual-card-inner-white {
-  background: transparent;
+/* SECTION 01 & 02: DUAL FLAGSHIP CARDS (EQUAL 50/50 WIDTH & EXPANDED HEIGHT) */
+.apple-dual-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
   width: 100%;
-  flex: 1;
-  padding: 0;
+  margin: 0;
+}
+
+.apple-flagship-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 44px 34px;
+  min-height: 460px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
-  text-align: left;
-  gap: 28px;
-  box-shadow: none;
-  border: none;
+  gap: 32px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
 }
 
+.apple-flagship-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 36px -4px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.02);
+  transform: translateY(-2px);
+}
+
+/* CARD HEADER & TYPOGRAPHY */
 .apple-card-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
-  text-align: left;
-  gap: 16px;
+  justify-content: flex-start;
   width: 100%;
+}
+
+.apple-header-title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+/* ACTIVE OPERATIONAL STEP BADGE */
+.apple-step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 9999px;
+  font-family: var(--font-display);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.14);
+}
+
+.apple-step-badge::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
 }
 
 .apple-card-title {
-  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-size: clamp(1.25rem, 1.8vw, 1.5rem);
   font-weight: 600;
-  color: #1d1d1f;
+  color: #0f172a;
   letter-spacing: -0.025em;
   line-height: 1.25;
   margin: 0;
   text-align: left;
-  flex: 1;
 }
 
-.apple-card-number {
-  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
-  font-weight: 700;
-  color: #86868b;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  text-align: right;
-  flex-shrink: 0;
-  font-family: var(--font-display);
-}
-
+/* 2x2 GRID TILES (STRICT EQUAL WIDTH) */
 .apple-grid-2x2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   width: 100%;
 }
 
-.apple-tile {
+/* APPLE ITEM TILES (CARDS 01-06 - ACTIVE WORKING MODE) */
+.apple-item-tile {
+  position: relative;
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
   border-radius: 16px;
-  padding: 22px 20px;
+  padding: 22px 18px;
+  min-height: 92px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
   text-align: left;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: default;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
 }
 
-.apple-tile:hover {
+.apple-item-tile:hover,
+.apple-item-tile:focus-visible {
   background: #ffffff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  border-color: rgba(0, 0, 0, 0.12);
+  border-color: #2563eb;
+  box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.12), 0 2px 6px rgba(15, 23, 42, 0.04);
   transform: translateY(-2px);
 }
 
+/* ICON CONTAINER WELL - ENERGIZED & ACTIVE */
+.apple-icon-well {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.06);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.apple-item-tile:hover .apple-icon-well {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* DOCTOR AVATAR WELL */
+.doctor-avatar-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.doctor-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.apple-item-tile:hover .doctor-avatar-wrap {
+  border-color: #2563eb;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* TILE TEXT BODY - HIGH DEFINITION CONTRAST */
+.apple-tile-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+}
+
 .apple-tile-title {
-  font-size: 1rem;
+  font-size: 0.96rem;
   font-weight: 600;
-  color: #1d1d1f;
+  color: #0f172a;
   letter-spacing: -0.015em;
   line-height: 1.25;
-  text-align: left;
+  margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.apple-tile-desc {
+  font-size: 0.82rem;
+  color: #475569;
+  margin: 3px 0 0 0;
+  line-height: 1.35;
+  font-weight: 400;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+/* TILE MINIMALIST ARROW ACTION (WITHOUT CIRCLE) */
+.apple-tile-action {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 4px;
+}
+
+.apple-item-tile:hover .apple-tile-action {
+  color: #2563eb;
+  transform: translateX(3px);
+}
+
+/* ============================================================
+   SECTION 03, 04, 05, 06: APPLE WORKFLOW 2x2 GRID (EQUAL WIDTH)
+   ============================================================ */
+.apple-workflow-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
   width: 100%;
   margin: 0;
 }
 
-.apple-tile-desc {
-  font-size: 0.84rem;
-  color: #86868b;
-  margin: 4px 0 0 0;
-  line-height: 1.4;
-  font-weight: 400;
-  text-align: left;
-  width: 100%;
-}
-
-/* Left-aligned clinic tiles with Clinic.png above text */
-.clinic-tile {
+.apple-workflow-card {
   position: relative;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 34px 30px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 14px;
-  text-align: left;
-  padding: 22px 20px;
-  width: 100%;
+  justify-content: space-between;
+  gap: 26px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   box-sizing: border-box;
-}
-
-.clinic-tile-img {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.clinic-tile-info {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  align-items: flex-start;
-  justify-content: flex-start;
+  width: 100%;
   min-width: 0;
-  width: 100%;
 }
 
-/* Left-aligned doctor tiles with Doctor 01 & Doctor 02 above text */
-.doctor-tile {
-  position: relative;
+.apple-workflow-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 36px -4px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.02);
+  transform: translateY(-2px);
+}
+
+.apple-workflow-items {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 14px;
-  text-align: left;
-  padding: 22px 20px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.doctor-tile-img {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(15, 76, 133, 0.12);
-}
-
-.doctor-tile-info {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  align-items: flex-start;
-  justify-content: flex-start;
-  min-width: 0;
   width: 100%;
 }
 
-.tile-arrow {
-  position: absolute;
-  right: 18px;
-  bottom: 18px;
-  color: #86868b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* FREE BORDERLESS TILES WITH CRISP INTERIOR DIVIDER (SECTIONS 03, 04, 05, 06) */
+.workflow-item-tile {
+  width: 100%;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 16px 8px;
+  border-radius: 12px;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  opacity: 0.75;
+  position: relative;
 }
 
-.doctor-tile:hover .tile-arrow,
-.clinic-tile:hover .tile-arrow {
-  color: #1d1d1f;
-  opacity: 1;
-  transform: translateX(3px);
+.workflow-item-tile:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  height: 1px;
+  background: #e2e8f0;
 }
 
-@media (max-width: 900px) {
-  .dual-cards-section {
+.workflow-item-tile:hover,
+.workflow-item-tile:focus-visible {
+  background: #f8fafc;
+  box-shadow: none;
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+@media (max-width: 960px) {
+  .apple-dual-section,
+  .apple-workflow-section {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 16px;
   }
-  .dual-card {
+  .apple-flagship-card,
+  .apple-workflow-card {
     padding: 24px 20px;
-    min-height: auto;
-    border-radius: 18px;
-  }
-  .dual-card-inner-white {
-    padding: 0;
-    border-radius: 0;
-    gap: 20px;
-  }
-  .apple-tile {
-    padding: 16px 14px;
+    border-radius: 20px;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 640px) {
   .apple-grid-2x2 {
     grid-template-columns: 1fr;
     gap: 10px;
   }
-}
-
-/* ============================================================
-   WORKFLOW 4-CARD SINGLE-LINE SECTION (PURE WHITE CARDS)
-   ============================================================ */
-.workflow-cards-section {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  width: 100%;
-  margin-top: 24px;
-}
-
-.workflow-white-card {
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 32px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 24px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 8px 30px rgba(15, 76, 133, 0.04);
-  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
-  box-sizing: border-box;
-}
-
-.workflow-white-card:hover {
-  box-shadow: 0 16px 40px rgba(15, 76, 133, 0.08);
-  transform: translateY(-3px);
-  border-color: rgba(0, 0, 0, 0.08);
-}
-
-.workflow-card-header {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  width: 100%;
-}
-
-.workflow-card-title {
-  font-size: clamp(1.18rem, 1.6vw, 1.45rem);
-  font-weight: 600;
-  color: #1d1d1f;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-  margin: 0;
-  text-align: left;
-  flex: 1;
-}
-
-.workflow-card-items {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  flex: 1;
-  justify-content: center;
-}
-
-.workflow-tile {
-  background: #f5f5f7;
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  border-radius: 16px;
-  padding: 18px 16px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 14px;
-  text-align: left;
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  cursor: default;
-}
-
-.workflow-tile:hover {
-  background: #ffffff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.08);
-  transform: translateY(-1px);
-}
-
-.workflow-tile-check {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: rgba(33, 143, 233, 0.12);
-  color: #218fe9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 1px;
-  box-shadow: 0 2px 6px rgba(33, 143, 233, 0.1);
-  transition: all 0.2s ease;
-}
-
-.workflow-tile:hover .workflow-tile-check {
-  background: #218fe9;
-  color: #ffffff;
-  transform: scale(1.06);
-}
-
-.workflow-tile-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  min-width: 0;
-  flex: 1;
-}
-
-@media (max-width: 1100px) {
-  .workflow-cards-section {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-}
-
-@media (max-width: 600px) {
-  .workflow-cards-section {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .workflow-white-card {
-    padding: 24px 18px;
-    border-radius: 18px;
-    gap: 18px;
+  .apple-tile-title,
+  .apple-tile-desc {
+    white-space: normal;
   }
 }
 

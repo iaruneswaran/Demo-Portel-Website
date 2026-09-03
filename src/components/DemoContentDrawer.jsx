@@ -253,10 +253,7 @@ export default function DemoContentDrawer() {
             filteredSnippets.map((item, idx) => (
               <div key={idx} className="demo-snippet-card">
                 <div className="demo-snippet-card-header">
-                  <div className="demo-snippet-meta">
-                    <span className="demo-section-pill">{item.section}</span>
-                    <span className="demo-tag-pill">{item.tag}</span>
-                  </div>
+                  <div className="demo-snippet-title">{item.title}</div>
                   <button
                     type="button"
                     className={`demo-copy-btn ${copiedIndex === idx ? 'copied' : ''}`}
@@ -281,7 +278,6 @@ export default function DemoContentDrawer() {
                   </button>
                 </div>
 
-                <div className="demo-snippet-title">{item.title}</div>
                 <div className="demo-snippet-content">{item.content}</div>
               </div>
             ))

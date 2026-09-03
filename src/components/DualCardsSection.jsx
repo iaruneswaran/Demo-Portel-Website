@@ -62,7 +62,7 @@ export default function DualCardsSection() {
         <div className="apple-card-header">
           <div className="apple-header-title-wrap">
             <span className="apple-step-badge">01</span>
-            <h2 className="apple-card-title">Select specialized hospital clinic intake</h2>
+            <h2 className="apple-card-title">Patient Onboarding AI Agent</h2>
           </div>
         </div>
 
@@ -92,7 +92,7 @@ export default function DualCardsSection() {
         <div className="apple-card-header">
           <div className="apple-header-title-wrap">
             <span className="apple-step-badge">02</span>
-            <h2 className="apple-card-title">Assigned specialists & clinical care</h2>
+            <h2 className="apple-card-title">Assigned specialists</h2>
           </div>
         </div>
 

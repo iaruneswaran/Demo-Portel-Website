@@ -264,12 +264,14 @@ button, input, select, textarea {
    APPLE DESIGN SYSTEM: CLINICAL INTAKE & WORKFLOW SECTIONS
    ============================================================ */
 
-/* CONTAINER FOR SECTIONS 01-06 (CENTERED 1360PX WIDTH) */
+/* CONTAINER FOR SECTIONS 01-06 (OVERLAY ON HERO SECTION) */
 .sections-wrapper {
   width: 100%;
   max-width: 1360px;
-  margin: 0 auto;
-  padding: 40px 24px 72px;
+  margin: -110px auto 0;
+  position: relative;
+  z-index: 10;
+  padding: 0 24px 72px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -289,12 +291,12 @@ button, input, select, textarea {
   position: relative;
   background: #ffffff;
   border-radius: 24px;
-  padding: 44px 34px;
-  min-height: 460px;
+  padding: 28px 26px;
+  min-height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 32px;
+  justify-content: flex-start;
+  gap: 36px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
@@ -322,7 +324,7 @@ button, input, select, textarea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
+  gap: 8px;
   width: 100%;
 }
 
@@ -331,10 +333,10 @@ button, input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 5px 12px;
+  padding: 4px 10px;
   background: #0f172a;
   color: #ffffff;
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   border-radius: 9999px;
@@ -353,7 +355,7 @@ button, input, select, textarea {
 }
 
 .apple-card-title {
-  font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+  font-size: clamp(1.2rem, 1.6vw, 1.42rem);
   font-weight: 600;
   color: #0f172a;
   letter-spacing: -0.025em;
@@ -366,7 +368,7 @@ button, input, select, textarea {
 .apple-grid-2x2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 10px;
   width: 100%;
 }
 
@@ -376,12 +378,12 @@ button, input, select, textarea {
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
-  padding: 22px 18px;
-  min-height: 92px;
+  padding: 16px 14px;
+  min-height: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   text-align: left;
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
@@ -516,11 +518,12 @@ button, input, select, textarea {
   position: relative;
   background: #ffffff;
   border-radius: 24px;
-  padding: 34px 30px;
+  padding: 28px 26px;
+  min-height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 26px;
+  justify-content: flex-start;
+  gap: 36px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
@@ -574,6 +577,10 @@ button, input, select, textarea {
    RESPONSIVE BREAKPOINTS
    ============================================================ */
 @media (max-width: 960px) {
+  .sections-wrapper {
+    margin-top: -60px;
+    padding: 0 16px 48px;
+  }
   .apple-dual-section,
   .apple-workflow-section {
     grid-template-columns: 1fr;
@@ -587,6 +594,10 @@ button, input, select, textarea {
 }
 
 @media (max-width: 640px) {
+  .sections-wrapper {
+    margin-top: -30px;
+    padding: 0 12px 36px;
+  }
   .apple-grid-2x2 {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -2087,9 +2098,9 @@ button, input, select, textarea {
 }
 
 .demo-copy-btn.copied {
-  background: #ecfdf5;
-  border-color: #10b981;
-  color: #059669;
+  background: #eff6ff;
+  border-color: #2563eb;
+  color: #2563eb;
 }
 
 .demo-snippet-title {
